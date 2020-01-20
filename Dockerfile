@@ -1,1 +1,2 @@
-FROM gcr.io/cluster-api-provider-vsphere/release/manager:v0.5.4
+FROM ubuntu:18.04
+RUN apt-get update -y && apt-get install git && git clone https://github.com/kubernetes-sigs/cluster-api.git
