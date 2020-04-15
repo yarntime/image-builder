@@ -1,1 +1,1 @@
-FROM node:10.20.1-stretch
+FROM jenkinsci/blueocean
