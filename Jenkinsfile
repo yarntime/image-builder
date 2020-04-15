@@ -5,13 +5,13 @@ pipeline {
       parallel {
         stage('build') {
           steps {
-            sh 'print "building"'
+            echo 'building'
           }
         }
 
-        stage('test') {
+        stage('testing') {
           steps {
-            sh 'print "testing"'
+            echo 'testing'
           }
         }
 
@@ -20,13 +20,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'print "deploying"'
-      }
-    }
-
-    stage('end') {
-      steps {
-        archiveArtifacts(artifacts: 'test', allowEmptyArchive: true, defaultExcludes: true)
+        echo 'deploying'
       }
     }
 
