@@ -1,5 +1,8 @@
 FROM ubuntu:18.04
 
-RUN apt-get update -y && apt-get install wget -y
+RUN apt-get update -y && apt-get install wget -y && apt-get install git -y
 
-RUN wget https://huggingface.co/GanymedeNil/text2vec-large-chinese/resolve/main/pytorch_model.bin?download=true
+RUN git lfs install 
+
+RUN git clone https://huggingface.co/AI-MO/NuminaMath-7B-TIR
+
